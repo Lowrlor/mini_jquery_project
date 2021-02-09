@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  a(href="/menu") Menu
+  button(id="myBtn") Menu
+  button(id="myBtn1") Basket
+  #Menu_modal.modal 
+    .modal-content
+      <span class="close">&times;</span>
+      #dish_list.dish
+        
+  #Basket_modal.modal
+    .modal-content
+      <span class="close">&times;</span>
+      .order_btn#save
+        button(id="new_order") Order all
+      #baslet_dish_list.dish
+      
+
+              
+  script(src="../javascripts/index_modal.js")
+  script(src="../javascripts/new_dish.js")
+  script(src="../javascripts/dish_list.js")
+  script(src="../javascripts/add_in_basket.js")
+  script(src="../javascripts/delete_from_basket.js")
+  script(src="../javascripts/dynamic_portion.js")
+  script(src="../javascripts/new_order.js")
+  

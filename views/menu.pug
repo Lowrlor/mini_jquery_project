@@ -1,0 +1,23 @@
+extends layout
+include layouts/includes/mixin.dish.pug
+block content
+  h1= title
+  p Welcome to #{title}
+  a(href="/") Home
+  form
+    input(type="file" name="picture" id="file")
+    br
+    input(type='text' name="name" placeholder="Назва")
+    br
+    input(type='text' name="weight" placeholder="Вага")
+    br
+    input(type='text' name="price" placeholder="Ціна")
+    br
+    button Add
+  #dish_list.dish
+    
+  
+  script(src="../javascripts/new_dish.js")
+  script(src="../javascripts/dish_list(menu).js")
+  script(src="../javascripts/delete_dish.js") 
+  
